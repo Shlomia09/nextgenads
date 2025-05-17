@@ -13,4 +13,4 @@ def generate_ad_copy(prompt: str):
         max_tokens=150,
         temperature=0.8
     )
-    return response.choices[0].message["content"]
+    return response.choices[0].message.content.strip()
